@@ -1,28 +1,18 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import React, { useEffect } from "react";
+import { StatusBar, Text, View } from "react-native";
+const App = () => {
+  // type bar={
+  //   color:boolean
+  //   light:boolean
+  //   immersive:boolean
+  // }
+  // useEffect(()=>{
+  //     changeNavigationBarColor('#000000', false, false); // background black, light icons, immersive mode
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
-
+  // })
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
-    </View>
+<View>Tanzeel Dev</View>
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
+};
 
 export default App;
