@@ -44,7 +44,8 @@ const CustomInput = ({
   marginb,
   alignIt,
   borderRadius,
-  marginHorizontal
+  marginHorizontal,
+  Inputheight
 }: any) => {
   const [ShowPassword,setShowPassword] = useState(true)
   return (
@@ -54,7 +55,7 @@ const CustomInput = ({
         alignItems: alignIt || "center",
         alignSelf: align || 'center',
         borderColor: bdc,
-        backgroundColor: bg || colors.inputwhite,
+        backgroundColor: bg || 'transparent',
         borderWidth: bw,
         justifyContent: "space-between",
         paddingHorizontal: paddingHorizontal || sizeHelper.calWp(20),
@@ -88,7 +89,7 @@ const CustomInput = ({
           <TextInput
             style={[{
               fontSize: Size || sizeHelper.calHp(20),
-              height: sizeHelper.calHp(100),
+              height: sizeHelper.calHp(Inputheight || 100),
               backgroundColor: bg,
               fontFamily: "Urbanist-SemiBold",
               fontWeight: fontWeight,
@@ -97,7 +98,7 @@ const CustomInput = ({
             }, style,
             ]}
             placeholder={placeholder}
-            placeholderTextColor={color || colors.black}
+            placeholderTextColor={color || colors.primary}
             keyboardType={keyboard}
             maxLength={maxLength}
             textContentType={textContentType}
@@ -116,7 +117,6 @@ const CustomInput = ({
             {
               !ShowPassword ?
               <Image
-              source={images.show}
               style={{
                 width: imgWidth || sizeHelper.calWp(40),
                 height: imgHeigth || sizeHelper.calWp(40),
@@ -124,7 +124,6 @@ const CustomInput = ({
             />
             :
             <Image
-              source={images.eye_closed}
               style={{
                 width: imgWidth || sizeHelper.calWp(40),
                 height: imgHeigth || sizeHelper.calWp(40),

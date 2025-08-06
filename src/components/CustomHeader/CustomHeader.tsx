@@ -10,36 +10,29 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 type HostingScreenProps = {
     navigation: NativeStackNavigationProp<any>
 }
-const CustomHeader = ({Press,arrow,text,mr,p,onPress}:any) => {
+const CustomHeader = ({ Press, arrow, text, mr, p, onPress, gap,textwidth }: any) => {
     return (
-        <View style={styles.Container}>
-            <StatusBar barStyle={'light-content'} backgroundColor={colors.primary} />
-            <View style={styles.HandleContainer}>
+        <View>
+            <View style={[styles.HandleContainer, {
+                gap: gap || sizeHelper.calWp(28),
+            }]}>
                 <TouchableOpacity onPress={onPress}>
-                <Image source={arrow} style={{ width:sizeHelper.calWp(55), height:sizeHelper.calWp(55)}}/>
+                    <Image source={arrow} style={{ width: sizeHelper.calWp(55), height: sizeHelper.calWp(55) }} />
                 </TouchableOpacity>
-                <View style={{width:95}} />
-            <CustomText text={text} 
-            fontfam={fonts.bold}
-            size={28} color={colors.white} fontWeight={"700"} textAlign={"center"} marginR={mr}/>
+                <View style={{ width: textwidth || sizeHelper.calWp( 175) }} />
+                <CustomText text={text}
+                    fontfam={fonts.bold}
+                    size={32} color={colors.primary} fontWeight={"600"} textAlign={"center"} marginR={mr} />
             </View>
         </View>
     );
 };
 const styles = StyleSheet.create({
-    Container: {
-    
-        // alignItems:'center',
-        justifyContent:'center',
-        backgroundColor: colors.primary,
-        padding:sizeHelper.calHp(50),
-        paddingHorizontal:sizeHelper.calWp(30)
-    },
-    HandleContainer:{
-        width:"60%",
-        flexDirection:"row",
-        alignItems:'center',
-        justifyContent:"space-between"
+
+    HandleContainer: {
+        flexDirection: "row",
+        alignItems: 'center',
+        marginTop: sizeHelper.calHp(42)
     }
 })
 

@@ -36,7 +36,7 @@ const CustomButton =({
         style={[
             {                
             width: width || '100%',
-            height: height || sizeHelper.calHp(100),
+            height: height || sizeHelper.calHp(90),
             backgroundColor: bgColor || colors.primary,
             justifyContent: "center",
             alignItems: "center",

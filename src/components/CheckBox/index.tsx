@@ -10,7 +10,7 @@ const Checkbox = ({ bg }: any) => {
   const [isChecked, setIsChecked] = useState(false)
   return (
     <TouchableOpacity
-      style={{ height: 30, width: 30, justifyContent: "center" }}
+      style={{ height: 20, width: 20, justifyContent: "center" }}
       activeOpacity={0.6}
       onPress={() => setIsChecked(!isChecked)}
     >
@@ -18,7 +18,7 @@ const Checkbox = ({ bg }: any) => {
         style={{
           width: sizeHelper.calWp(32),
           height: sizeHelper.calWp(32),
-          borderRadius: sizeHelper.calWp(5),
+          borderRadius: sizeHelper.calWp(8),
           borderWidth: 1,
           borderColor: bg || colors.primary,
           justifyContent: "center",
@@ -33,13 +33,13 @@ const Checkbox = ({ bg }: any) => {
           style={{
             width: sizeHelper.calWp(32),
             height: sizeHelper.calWp(32),
-            borderRadius: sizeHelper.calWp(5),
+            borderRadius: sizeHelper.calWp(8),
             borderWidth: 1,
             borderColor: bg || "#09CA67",
             backgroundColor: bg || "#09CA67",
             justifyContent: "center",
             alignItems: "center",
-            padding: sizeHelper.calWp(13),
+            padding: sizeHelper.calWp(16),
           }}
         >
           <Image
