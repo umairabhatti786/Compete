@@ -36,160 +36,165 @@ const Community = (props: HostingScreenProps) => {
                 />
 
                 <View style={{
-                    gap:sizeHelper.calWp(30)
+                    gap: sizeHelper.calWp(30)
                 }}>
                     <View style={styles.card}>
-                    <View style={{
-                        flexDirection: 'row',
-                        alignItems: 'center',
-                        padding: sizeHelper.calWp(20),
-                        gap: sizeHelper.calWp(20)
-                    }}>
-                        <Image
-                            source={images.clubpro}
-                            style={{
-                                width: sizeHelper.calWp(120),
-                                height: sizeHelper.calWp(120)
-                            }}
-                        />
-                        <View style={{ gap: sizeHelper.calWp(16), alignSelf: 'center', alignItems: 'center', }}>
-                            <CustomText text={"Club Pro France"} size={24} />
-                            <View style={{
-                                flexDirection: 'row',
-                                gap: sizeHelper.calWp(14),
-                                alignItems: 'center'
+                        <View style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            padding: sizeHelper.calWp(20),
+                            gap: sizeHelper.calWp(20)
+                        }}>
+                            <Image
+                                source={images.clubpro}
+                                style={{
+                                    width: sizeHelper.calWp(120),
+                                    height: sizeHelper.calWp(120)
+                                }}
+                            />
+                            <View style={{ gap: sizeHelper.calWp(16), alignSelf: 'center', alignItems: 'center', }}>
+                                <CustomText text={"Club Pro France"} size={24} />
+                                <View style={{
+                                    flexDirection: 'row',
+                                    gap: sizeHelper.calWp(14),
+                                    alignItems: 'center'
 
-                            }}>
-                                <Image
-                                    source={images.users}
-                                    style={{
-                                        width: sizeHelper.calWp(30),
-                                        height: sizeHelper.calWp(30)
-                                    }}
-                                />
-                                <CustomText text={"7055 Members"} />
+                                }}>
+                                    <Image
+                                        source={images.users}
+                                        style={{
+                                            width: sizeHelper.calWp(30),
+                                            height: sizeHelper.calWp(30)
+                                        }}
+                                    />
+                                    <CustomText text={"7055 Members"} />
+                                </View>
                             </View>
                         </View>
-                    </View>
-                    <CustomText text={"Founding organization of the IFC"} color={colors.primary + '60'} marginL={sizeHelper.calWp(20)} size={22} />
-                    <View style={{
-                        flexDirection: 'row',
-                        alignItems:'center',
-                        justifyContent: 'space-between',
-                        marginBottom: sizeHelper.calHp(10),
-                        marginLeft: sizeHelper.calWp(10),
-                        marginTop:sizeHelper.calHp(30),
-                        marginRight: sizeHelper.calWp(10),
-                    }}>
-                        <View
-                            style={{
-                                flexDirection: 'row',
-                                alignItems: 'center',
-                                borderWidth: 0.5,
-                                borderColor: '#D4DCE2',
-                                width: '40%',
-                                borderRadius: sizeHelper.calWp(25),
-                                gap:sizeHelper.calWp(20)
-                            }}
-                        >
+                        <CustomText text={"Founding organization of the IFC"} color={colors.primary + '60'} marginL={sizeHelper.calWp(20)} size={22} />
+                        <View style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                            marginBottom: sizeHelper.calHp(10),
+                            marginLeft: sizeHelper.calWp(10),
+                            marginTop: sizeHelper.calHp(30),
+                            marginRight: sizeHelper.calWp(10),
+                        }}>
                             <View
                                 style={{
-                                    backgroundColor: 'black',
-                                    width: '35%',
-                                    height: sizeHelper.calHp(70),
-                                    borderTopLeftRadius: sizeHelper.calWp(25),
-                                    borderBottomLeftRadius: sizeHelper.calWp(25),
-                                    alignItems:'center',
-                                    justifyContent:'center'
-
+                                    flexDirection: 'row',
+                                    alignItems: 'center',
+                                    borderWidth: 0.5,
+                                    borderColor: '#D4DCE2',
+                                    width: '40%',
+                                    borderRadius: sizeHelper.calWp(25),
+                                    gap: sizeHelper.calWp(20)
                                 }}
                             >
-                                <Image source={images.ea_sports} style={{
-                                    width: sizeHelper.calWp(60), height: sizeHelper.calWp(65)
-                                }} />
+                                <View
+                                    style={{
+                                        backgroundColor: 'black',
+                                        width: '35%',
+                                        height: sizeHelper.calHp(70),
+                                        borderTopLeftRadius: sizeHelper.calWp(25),
+                                        borderBottomLeftRadius: sizeHelper.calWp(25),
+                                        alignItems: 'center',
+                                        justifyContent: 'center'
+
+                                    }}
+                                >
+                                    <Image source={images.ea_sports} style={{
+                                        width: sizeHelper.calWp(60), height: sizeHelper.calWp(65)
+                                    }} />
+                                </View>
+                                <CustomText text={"EAFC 25"} size={22} />
                             </View>
-                            <CustomText text={"EAFC 25"} size={22} />
+                            <CustomButton text={"Join"} textColor="white" width={"20%"} height={sizeHelper.calHp(65)} />
                         </View>
-                        <CustomButton text={"Join"} textColor="white" width={"20%"} height={sizeHelper.calHp(65)} />
                     </View>
-                </View>
                     <View style={styles.card}>
-                    <View style={{
-                        flexDirection: 'row',
-                        alignItems: 'center',
-                        padding: sizeHelper.calWp(20),
-                        gap: sizeHelper.calWp(20)
-                    }}>
-                        <Image
-                            source={images.clubpro}
-                            style={{
-                                width: sizeHelper.calWp(120),
-                                height: sizeHelper.calWp(120)
-                            }}
-                        />
-                        <View style={{ gap: sizeHelper.calWp(16), alignSelf: 'center', alignItems: 'center', }}>
-                            <CustomText text={"Club Pro France"} size={24} />
-                            <View style={{
-                                flexDirection: 'row',
-                                gap: sizeHelper.calWp(14),
-                                alignItems: 'center'
+                        <View style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            padding: sizeHelper.calWp(20),
+                            gap: sizeHelper.calWp(20)
+                        }}>
+                            <Image
+                                source={images.clubpro}
+                                style={{
+                                    width: sizeHelper.calWp(120),
+                                    height: sizeHelper.calWp(120)
+                                }}
+                            />
+                            <View style={{ gap: sizeHelper.calWp(16), alignSelf: 'center', alignItems: 'center', }}>
+                                <CustomText text={"Club Pro France"} size={24} />
+                                <View style={{
+                                    flexDirection: 'row',
+                                    gap: sizeHelper.calWp(14),
+                                    alignItems: 'center'
 
-                            }}>
-                                <Image
-                                    source={images.users}
-                                    style={{
-                                        width: sizeHelper.calWp(30),
-                                        height: sizeHelper.calWp(30)
-                                    }}
-                                />
-                                <CustomText text={"7055 Members"} />
+                                }}>
+                                    <Image
+                                        source={images.users}
+                                        style={{
+                                            width: sizeHelper.calWp(30),
+                                            height: sizeHelper.calWp(30)
+                                        }}
+                                    />
+                                    <CustomText text={"7055 Members"} />
+                                </View>
                             </View>
                         </View>
-                    </View>
-                    <CustomText text={"Founding organization of the IFC"} color={colors.primary + '60'} marginL={sizeHelper.calWp(20)} size={22} />
-                    <View style={{
-                        flexDirection: 'row',
-                        alignItems:'center',
-                        justifyContent: 'space-between',
-                        marginBottom: sizeHelper.calHp(10),
-                        marginLeft: sizeHelper.calWp(10),
-                        marginTop:sizeHelper.calHp(30),
-                        marginRight: sizeHelper.calWp(10),
-                    }}>
-                        <View
-                            style={{
-                                flexDirection: 'row',
-                                alignItems: 'center',
-                                borderWidth: 0.5,
-                                borderColor: '#D4DCE2',
-                                width: '40%',
-                                borderRadius: sizeHelper.calWp(25),
-                                gap:sizeHelper.calWp(20)
-                            }}
-                        >
+                        <CustomText text={"Founding organization of the IFC"} color={colors.primary + '60'} marginL={sizeHelper.calWp(20)} size={22} />
+                        <View style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                            marginBottom: sizeHelper.calHp(10),
+                            marginLeft: sizeHelper.calWp(10),
+                            marginTop: sizeHelper.calHp(30),
+                            marginRight: sizeHelper.calWp(10),
+                        }}>
                             <View
                                 style={{
-                                    backgroundColor: 'black',
-                                    width: '35%',
-                                    height: sizeHelper.calHp(70),
-                                    borderTopLeftRadius: sizeHelper.calWp(25),
-                                    borderBottomLeftRadius: sizeHelper.calWp(25),
-                                    alignItems:'center',
-                                    justifyContent:'center'
-
+                                    flexDirection: 'row',
+                                    alignItems: 'center',
+                                    borderWidth: 0.5,
+                                    borderColor: '#D4DCE2',
+                                    width: '40%',
+                                    borderRadius: sizeHelper.calWp(25),
+                                    gap: sizeHelper.calWp(20)
                                 }}
                             >
-                                <Image source={images.ea_sports} style={{
-                                    width: sizeHelper.calWp(60), height: sizeHelper.calWp(65)
-                                }} />
+                                <View
+                                    style={{
+                                        backgroundColor: 'black',
+                                        width: '35%',
+                                        height: sizeHelper.calHp(70),
+                                        borderTopLeftRadius: sizeHelper.calWp(25),
+                                        borderBottomLeftRadius: sizeHelper.calWp(25),
+                                        alignItems: 'center',
+                                        justifyContent: 'center'
+
+                                    }}
+                                >
+                                    <Image source={images.ea_sports} style={{
+                                        width: sizeHelper.calWp(60), height: sizeHelper.calWp(65)
+                                    }} />
+                                </View>
+                                <CustomText text={"EAFC 25"} size={22} />
                             </View>
-                            <CustomText text={"EAFC 25"} size={22} />
+                            <CustomButton
+                                text={"Join"}
+                                textColor="white"
+                                width={"20%"}
+                                height={sizeHelper.calHp(65)}
+                            />
                         </View>
-                        <CustomButton text={"Join"} textColor="white" width={"20%"} height={sizeHelper.calHp(65)} />
                     </View>
                 </View>
             </View>
-                </View>
             <View style={{
                 flex: 1,
                 justifyContent: 'flex-end',
@@ -213,7 +218,14 @@ const Community = (props: HostingScreenProps) => {
                     >
                         <CustomText text={"Back"} size={25} />
                     </TouchableOpacity>
-                    <CustomButton text={"Finish"} textColor="white" fontSize={25} width={"75%"} alignSelf="flex-end" />
+                    <CustomButton
+                        text={"Finish"}
+                        textColor="white"
+                        fontSize={25}
+                        width={"75%"}
+                        alignSelf="flex-end"
+                        onPress={() => props.navigation.navigate('Tabs')}
+                    />
                 </View>
             </View>
         </View>

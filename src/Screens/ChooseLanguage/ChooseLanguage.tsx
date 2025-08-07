@@ -57,7 +57,7 @@ const ChooseLanguage = (props: HostingScreenProps) => {
                         fontSize={25}
                         width={"75%"}
                         alignSelf="flex-end"
-                        onPress={()=>props.navigation.navigate('Community')}
+                        onPress={()=>props.navigation.navigate('FavGames')}
                     />
                 </View>
             </View>

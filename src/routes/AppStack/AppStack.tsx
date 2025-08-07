@@ -9,6 +9,8 @@ import OtpScreen from "../../Screens/OtpScreen/OtpScreen";
 import AddPics from "../../Screens/AddPics/AddPic";
 import ChooseLanguage from "../../Screens/ChooseLanguage/ChooseLanguage";
 import Community from "../../Screens/Community/Community";
+import FavGames from "../../Screens/FavGames/FavGames";
+import Tabs from "../BottomTab/Tab";
 const Stack = createNativeStackNavigator();
 const AppStack=()=>{
     return(
@@ -22,6 +24,8 @@ const AppStack=()=>{
             <Stack.Screen name="AddPics" component={AddPics} />
             <Stack.Screen name="ChooseLanguage" component={ChooseLanguage} />
             <Stack.Screen name="Community" component={Community} />
+            <Stack.Screen name="FavGames" component={FavGames} />
+            <Stack.Screen name="Tabs" component={Tabs} />
         </Stack.Navigator>
     )
 }
