@@ -1,21 +1,22 @@
 import React from "react";
 import{createNativeStackNavigator} from "@react-navigation/native-stack"
-import WellComeScreen from "../../Screens/WellComeScreen/WellComeScreen";
-import LoginSignIn from "../../Screens/LoginSignIn/LoginSignIn";
-import LoginScreen from "../../Screens/LoginScreen/LoginScreen";
-import SignInScreen from "../../Screens/SignInScreen/SignInScreen";
-import ForgotPassword from "../../Screens/ForgotPassword/ForgotPassword";
-import OtpScreen from "../../Screens/OtpScreen/OtpScreen";
-import AddPics from "../../Screens/AddPics/AddPic";
-import ChooseLanguage from "../../Screens/ChooseLanguage/ChooseLanguage";
-import Community from "../../Screens/Community/Community";
-import FavGames from "../../Screens/FavGames/FavGames";
+
 import Tabs from "../BottomTab/Tab";
+import WelComeScreen from "../../Screens/Auth/WelComeScreen";
+import LoginSignIn from "../../Screens/Auth/LoginSignIn/LoginSignIn";
+import LoginScreen from "../../Screens/Auth/LoginScreen/LoginScreen";
+import SignInScreen from "../../Screens/Auth/SignInScreen/SignInScreen";
+import ForgotPassword from "../../Screens/Auth/ForgotPassword/ForgotPassword";
+import OtpScreen from "../../Screens/Auth/OtpScreen/OtpScreen";
+import AddPics from "../../Screens/Auth/AddPics/AddPic";
+import ChooseLanguage from "../../Screens/Auth/ChooseLanguage/ChooseLanguage";
+import Community from "../../Screens/Auth/Community/Community";
+import FavGames from "../../Screens/Auth/FavGames/FavGames";
 const Stack = createNativeStackNavigator();
 const AppStack=()=>{
     return(
         <Stack.Navigator screenOptions={{headerShown:false}}>
-            <Stack.Screen name="WellComeScreen" component={WellComeScreen} />
+            <Stack.Screen name="WelComeScreen" component={WelComeScreen} />
             <Stack.Screen name="LoginSignIn" component={LoginSignIn} />
             <Stack.Screen name="LoginScreen" component={LoginScreen} />
             <Stack.Screen name="SignInScreen" component={SignInScreen} />

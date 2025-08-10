@@ -6,8 +6,7 @@ import { useState } from "react";
 
 
 
-const Checkbox = ({ bg }: any) => {
-  const [isChecked, setIsChecked] = useState(false)
+const Checkbox = ({ bg,setIsChecked,isChecked }: any) => {
   return (
     <TouchableOpacity
       style={{ height: 20, width: 20, justifyContent: "center" }}
@@ -43,7 +42,8 @@ const Checkbox = ({ bg }: any) => {
           }}
         >
           <Image
-            style={{ width: sizeHelper.calWp(16), height: sizeHelper.calWp(16), tintColor: colors.white }}
+          resizeMode="contain"
+            style={{ width: sizeHelper.calWp(18), height: sizeHelper.calWp(18), tintColor: colors.white }}
             source={images.tick}
           />
         </View>

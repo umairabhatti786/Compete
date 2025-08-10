@@ -30,6 +30,20 @@ export default{
     stadium:require('./stadium.png'),
     white_search:require('./white_search.png'),
     wolves:require('./wolves.png'),
+
+
+/// Tab
     home:require('./home.png'),
+    teams:require('./teams.png'),
+    tournaments:require('./tournaments.png'),
+    notifications:require('./notifications.png'),
+    account:require('./account.png'),
+
+    home_filled:require('./home_filled.png'),
+    teams_filled:require('./teams_filled.png'),
+    tournaments_filled:require('./tournaments_filled.png'),
+    notifications_filled:require('./notifications_filled.png'),
+    account_filled:require('./account_filled.png'),
+
 
 }

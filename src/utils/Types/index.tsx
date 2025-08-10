@@ -42,6 +42,8 @@ export type ButtonType={
     marginLeft?:number,
     onPress?:()=>void,
   style?: any;
+  children?:any
+  fontfam?:string
 }
 export type InputType={
     placeholder?:string,

@@ -1,9 +1,9 @@
 export const fonts = {
-    bold: 'Poppins-Black',
-    black : 'Outfit-Black',
-    light: 'Outfit-Light',
-    medium: 'Outfit-Medium',
-    regular: 'Outfit-Regular',
-    Semibold: 'Outfit-SemiBold',
+    bold:'Poppins-Bold',
+    black:'Poppins-Black',
+    light:'Poppins-Light',
+    medium:'Poppins-Medium',
+    regular:'Poppins-Regular',
+    Semibold:'Poppins-SemiBold',
   };
   

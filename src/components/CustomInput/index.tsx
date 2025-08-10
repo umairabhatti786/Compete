@@ -1,10 +1,11 @@
-import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
-import { colors } from "../../utils/colors";
-import CustomText from "../CustomText";
-import sizeHelper from "../../utils/Helpers";
-import { InputType } from "../../utils/Types";
-import { useState } from "react";
-import images from "../../assets/images";
+import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { colors } from '../../utils/colors';
+import CustomText from '../CustomText';
+import sizeHelper from '../../utils/Helpers';
+import { InputType } from '../../utils/Types';
+import { useState } from 'react';
+import images from '../../assets/images';
+import { fonts } from '../../utils/Fonts';
 
 const CustomInput = ({
   placeholder,
@@ -45,32 +46,43 @@ const CustomInput = ({
   alignIt,
   borderRadius,
   marginHorizontal,
-  Inputheight
+  Inputheight,
+  label,
+  textAlignVertical,
+  innerPaddingTop,
 }: any) => {
-  const [ShowPassword,setShowPassword] = useState(true)
+  const [ShowPassword, setShowPassword] = useState(true);
   return (
-    <View style={{ ...props, marginTop: mT, }}>
-      <View style={[{
-        flexDirection: "row",
-        alignItems: alignIt || "center",
-        alignSelf: align || 'center',
-        borderColor: bdc,
-        backgroundColor: bg || 'transparent',
-        borderWidth: bw,
-        justifyContent: "space-between",
-        paddingHorizontal: paddingHorizontal || sizeHelper.calWp(20),
-        borderRadius: borderRadius || sizeHelper.calWp(20),
-        width: width || "100%",
-        height: height,
-        marginLeft: marginLeft,
-        marginBottom: marginb,
-      },
-        style,
-      ]}>
+    <View style={{ ...props, marginTop: mT, gap: sizeHelper.calHp(10) }}>
+      {
+        label&&(
+          <CustomText text={label} size={23} color={colors.primary_black} />
+
+
+        )
+      }
+      <View
+        style={[
+          {
+            flexDirection: 'row',
+            alignItems: alignIt || 'center',
+            alignSelf: align || 'center',
+            borderColor: bdc || '#E6E6E6',
+            backgroundColor: bg || 'transparent',
+            borderWidth: bw || 1,
+            height: sizeHelper.calHp(Inputheight || 80),
+            justifyContent: 'space-between',
+            paddingHorizontal: paddingHorizontal || sizeHelper.calWp(20),
+            borderRadius: borderRadius || sizeHelper.calWp(20),
+            width: width || '100%',
+            marginLeft: marginLeft,
+            marginBottom: marginb,
+          },
+          style,
+        ]}
+      >
         {leftImage && (
-          <View
-            style={{ justifyContent: "center", alignItems: "center" }}
-          >
+          <View style={{ justifyContent: 'center', alignItems: 'center' }}>
             <Image
               source={leftImage}
               resizeMode="contain"
@@ -83,22 +95,26 @@ const CustomInput = ({
           </View>
         )}
 
-
-
-        <View style={{ flex: 1, marginHorizontal:marginHorizontal || 10 }}>
+        <View style={{ flex: 1, marginHorizontal: marginHorizontal || 10 }}>
           <TextInput
-            style={[{
-              fontSize: Size || sizeHelper.calHp(20),
-              height: sizeHelper.calHp(Inputheight || 100),
-              backgroundColor: bg,
-              fontFamily: "Urbanist-SemiBold",
-              fontWeight: fontWeight,
-              textAlign: txalign,
-              ...(isCenter && { alignSelf: "center" }),
-            }, style,
+            style={[
+              {
+                fontSize: Size || sizeHelper.calHp(20),
+                fontFamily: fonts.regular,
+                fontWeight: fontWeight || '500',
+                height: '100%',
+                textAlign: txalign,
+                justifyContent: 'center',
+                textAlignVertical: textAlignVertical,
+                color: colors.primary,
+
+                paddingTop: innerPaddingTop,
+                ...(isCenter && { alignSelf: 'center' }),
+              },
+              style,
             ]}
             placeholder={placeholder}
-            placeholderTextColor={color || colors.primary}
+            placeholderTextColor={colors.natural_dark_gray}
             keyboardType={keyboard}
             maxLength={maxLength}
             textContentType={textContentType}
@@ -110,26 +126,30 @@ const CustomInput = ({
         </View>
         {rightImage && (
           <TouchableOpacity
-            onPress={()=>setShowPassword(!ShowPassword)}
+            onPress={() => setShowPassword(!ShowPassword)}
             activeOpacity={0.6}
-            style={{ justifyContent: justifyContent || "center", alignItems: "center", flexDirection: fd || 'row', marginLeft: ml }}
+            style={{
+              justifyContent: justifyContent || 'center',
+              alignItems: 'center',
+              flexDirection: fd || 'row',
+              marginLeft: ml,
+            }}
           >
-            {
-              !ShowPassword ?
+            {!ShowPassword ? (
               <Image
-              style={{
-                width: imgWidth || sizeHelper.calWp(40),
-                height: imgHeigth || sizeHelper.calWp(40),
-              }}
-            />
-            :
-            <Image
-              style={{
-                width: imgWidth || sizeHelper.calWp(40),
-                height: imgHeigth || sizeHelper.calWp(40),
-              }}
-            />
-            }
+                style={{
+                  width: imgWidth || sizeHelper.calWp(40),
+                  height: imgHeigth || sizeHelper.calWp(40),
+                }}
+              />
+            ) : (
+              <Image
+                style={{
+                  width: imgWidth || sizeHelper.calWp(40),
+                  height: imgHeigth || sizeHelper.calWp(40),
+                }}
+              />
+            )}
           </TouchableOpacity>
         )}
         {SecondrightImage && (
@@ -137,7 +157,12 @@ const CustomInput = ({
             onPress={onShowPassword}
             activeOpacity={0.6}
             disabled={!onShowPassword}
-            style={{ justifyContent: justifyContent || "center", alignItems: "center", flexDirection: fd || 'row', marginLeft: ml }}
+            style={{
+              justifyContent: justifyContent || 'center',
+              alignItems: 'center',
+              flexDirection: fd || 'row',
+              marginLeft: ml,
+            }}
           >
             <Image
               source={SecondrightImage}
@@ -149,7 +174,6 @@ const CustomInput = ({
             />
           </TouchableOpacity>
         )}
-
       </View>
     </View>
   );

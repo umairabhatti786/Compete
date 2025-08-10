@@ -17,7 +17,6 @@
     "react": "19.1.0",
     "react-native": "0.80.2",
     "react-native-confirmation-code-field": "^8.0.1",
-    "react-native-navigation-bar-color": "^2.0.2",
     "react-native-safe-area-context": "^5.5.2",
     "react-native-screens": "^4.13.1",
     "react-native-vector-icons": "^10.3.0"
@@ -44,5 +43,6 @@
   },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
