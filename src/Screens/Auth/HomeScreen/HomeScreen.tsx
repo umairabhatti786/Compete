@@ -3,6 +3,7 @@ import {
   FlatList,
   Image,
   ScrollView,
+  StatusBar,
   StyleSheet,
   View,
 } from 'react-native';
@@ -21,6 +22,7 @@ type HostingScreenProps = {
 const HomeScreen = (props: HostingScreenProps) => {
   return (
     <View style={styles.container}>
+      <StatusBar hidden />
       <View
         style={{
           //   marginTop: sizeHelper.calHp(30),

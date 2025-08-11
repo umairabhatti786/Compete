@@ -2,7 +2,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { colors } from '../../utils/colors';
 import images from '../../assets/images';
 import { Image, Platform, StyleSheet, View } from 'react-native';
-import HomeScreen from '../../Screens/HomeScreen/HomeScreen';
 import sizeHelper from '../../utils/Helpers';
 import CustomText from '../../components/CustomText';
 import { fonts } from '../../utils/Fonts';
@@ -10,6 +9,9 @@ import TournamentsScreen from '../../Screens/Main/Tournaments';
 import TeamsScreen from '../../Screens/Main/Teams';
 import NotificationsScreen from '../../Screens/Main/Notifications';
 import AccountScreen from '../../Screens/Main/Account';
+import HomeScreen from '../../Screens/Auth/HomeScreen/HomeScreen';
+import TournamentStack from '../TournamentStack/TournamentStack';
+import TeamStack from '../TeamStack/TeamStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -78,7 +80,7 @@ const Tabs = () => {
 
 <Tab.Screen
         name="Tournaments"
-        component={TournamentsScreen}
+        component={TournamentStack}
         options={{
           headerShown: false,
           tabBarShowLabel: false,
@@ -97,8 +99,8 @@ const Tabs = () => {
       />
 
 <Tab.Screen
-        name="Teams"
-        component={TeamsScreen}
+        name="TeamStack"
+        component={TeamStack}
         options={{
           headerShown: false,
           tabBarShowLabel: false,

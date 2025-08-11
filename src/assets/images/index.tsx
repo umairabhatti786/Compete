@@ -44,6 +44,78 @@ export default{
     tournaments_filled:require('./tournaments_filled.png'),
     notifications_filled:require('./notifications_filled.png'),
     account_filled:require('./account_filled.png'),
+    
+    //Tournament
+    premiere_league_tournament:require('./premiere_league_tournament.png'),
+    champions_cup:require('./champions_cup.png'),
+    world_cup_qualifier:require('./world_cup_qualifier.png'),
+    league_cup:require('./league_cup.png'),
+    champions_league:require('./champions_league.png'),
+    down:require('./down.png'),
+    
+    // Custom Header
+    white_back_arrow:require('./white_back_arrow.png'),
+    
+    //Teams
+    fc_barcelona:require('./fc_barcelona.png'),
+    real_madrid:require('./real_madrid.png'),
+    manchester_united:require('./manchester_united.png'),
+    bayern_munich:require('./bayern_munich.png'),
+    juventus:require('./juventus.png'),
+    paris_saint_germain:require('./paris_saint_germain.png'),
+    
+    
+    //Teams
+    add:require('./add.png'),
+    
+    // Club Data
+    barcelona:require('./barcelona.png'),
+    madrid:require('./madrid.png'),
+    manchester:require('./manchester.png'),
+    liverpool:require('./liverpool.png'),
+    
+    
+    //Choose Logo
+    logo_one:require('./logo_one.png'),
+    logo_two:require('./logo_two.png'),
+    logo_three:require('./logo_three.png'),
+    logo_four:require('./logo_four.png'),
+    logo_five:require('./logo_five.png'),
+    logo_six:require('./logo_six.png'),
+    
+    //Members
+    ethan_carter:require('./ethan_carter.png'),
+    liam_harper:require('./liam_harper.png'),
+    noah_bennett:require('./noah_bennett.png'),
+    oliver_hayes:require('./oliver_hayes.png'),
+    elijah_foster:require('./elijah_foster.png'),
+    james_coleman:require('./james_coleman.png'),
+    black_plus:require('./black_plus.png'),
+    
+    
+    //Roles
+    ethan:require('./ethan.png'),
+    liam:require('./liam.png'),
+    noah:require('./noah.png'),
+    oliver:require('./oliver.png'),
+    elijah:require('./elijah.png'),
+    lucas:require('./lucas.png'),
+
+    //Linup
+    lineup:require('./lineup.png'),
+    match_stadium:require('./match_stadium.png'),
+    
+    
+    //Players Linup 
+    lionel_messi:require('./lionel_messi.png'),
+    andres_iniesta:require('./andres_iniesta.png'),
+    gerard_pique:require('./gerard_pique.png'),
+    victor_valdes:require('./victor_valdes.png'),
+    
+    //Notification Screen
+    summer_cup:require('./summer_cup.png'),
+    player_joined:require('./player_joined.png'),
+    
 
 
 }

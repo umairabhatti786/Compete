@@ -12,6 +12,10 @@ import AddPics from "../../Screens/Auth/AddPics/AddPic";
 import ChooseLanguage from "../../Screens/Auth/ChooseLanguage/ChooseLanguage";
 import Community from "../../Screens/Auth/Community/Community";
 import FavGames from "../../Screens/Auth/FavGames/FavGames";
+import CreateTeam from "../../Screens/Auth/CreateTeam/CreateTeam";
+import TeamMember from "../../Screens/Auth/TeamMember/TeamMember";
+import TeamStack from "../TeamStack/TeamStack";
+import MatcPrep from "../../Screens/Auth/MatcPrep/MatchPrep";
 const Stack = createNativeStackNavigator();
 const AppStack=()=>{
     return(
@@ -27,6 +31,9 @@ const AppStack=()=>{
             <Stack.Screen name="Community" component={Community} />
             <Stack.Screen name="FavGames" component={FavGames} />
             <Stack.Screen name="Tabs" component={Tabs} />
+            <Stack.Screen name="CreateTeam" component={CreateTeam} />
+            <Stack.Screen name="TeamMember" component={TeamMember} />
+            <Stack.Screen name="MatcPrep" component={MatcPrep} />
         </Stack.Navigator>
     )
 }

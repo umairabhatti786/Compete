@@ -12,13 +12,15 @@ const CustomLine = ({
   width,
   style,
   radius,
+  flex
 }: any) => {
   return (
     <View
       style={[
         {
           height: height || sizeHelper.calHp(3),
-          flex: 1,
+          width: width,
+          flex: width ? undefined : 1,
           marginTop: marginTop,
           marginRight: marginRight || 0,
           marginLeft: marginLeft || 0,
