@@ -104,7 +104,6 @@ const SubmitMatchResultScreen = (props: NotificationsScreenProps) => {
       <ScrollView
         scrollEnabled={true}
         style={{
-        //   gap: sizeHelper.calHp(40),
           paddingTop: sizeHelper.calHp(30),
         }}
         contentContainerStyle={{ gap: sizeHelper.calHp(40),paddingBottom:sizeHelper.calHp(30) }}
