@@ -181,7 +181,7 @@ const Lineup = (props: NotificationsScreenProps) => {
 
       <CustomText
         text={'Formation'}
-        size={35}
+        size={33}
         marginT={sizeHelper.calHp(30)}
         color="white"
         fontWeight={'700'}

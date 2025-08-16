@@ -233,6 +233,45 @@ export const YourTournamentsData = [
   },
 ];
 
+export const CashPrizes = [
+  {
+    title: 'Prize Pool',
+    data: [
+      {
+        id: 1,
+        price: "$1000",
+        des: 'Total prize pool',
+        country: 'USD',
+      },
+      
+    ],
+  },
+  {
+    title: 'Prize Breakdown',
+    data: [
+     {
+        id: 1,
+        price: "$500",
+        des: 'Winner',
+        country: 'USD',
+      },
+       {
+        id: 1,
+        price: "$300",
+        des: 'Runner-up',
+        country: 'USD',
+      },
+       {
+        id: 1,
+        price: "$200",
+        des: 'Third Place',
+        country: 'USD',
+      },
+    ],
+  },
+
+];
+
 export const LiveMatcheDate: ClubDataType[] = [
   {
     id: 1,

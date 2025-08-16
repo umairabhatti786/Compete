@@ -8,7 +8,7 @@ import { fonts } from '../../../utils/Fonts';
 import { colors } from '../../../utils/colors';
 import images from '../../../assets/images';
 import ScreenLayout from '../../../components/ScreenLayout';
-import { CashPrizesData } from '../../../utils/Data';
+import { CashPrizes, CashPrizesData } from '../../../utils/Data';
 import CustomHeader from '../../../components/CustomHeader/CustomHeader';
 type NotificationsScreenProps = {
   navigation: NativeStackNavigationProp<any>;
@@ -58,7 +58,7 @@ const CashPrizesScreen = (props: NotificationsScreenProps) => {
       />
 
       <SectionList
-        sections={CashPrizesData}
+        sections={CashPrizes}
         contentContainerStyle={{ gap: sizeHelper.calHp(20) }}
         style={{
           gap: sizeHelper.calHp(40),
@@ -68,7 +68,7 @@ const CashPrizesScreen = (props: NotificationsScreenProps) => {
         renderSectionHeader={({ section: { title } }) => (
           <CustomText
             text={title}
-            size={33}
+            size={30}
             marginB={sizeHelper.calHp(20)}
             color={colors.white}
             fontWeight={'700'}

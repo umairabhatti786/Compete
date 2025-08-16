@@ -36,7 +36,7 @@ const TeamMember = (props: NotificationsScreenProps) => {
       <CustomText
         text={'Members'}
         fontfam={fonts.bold}
-        size={35}
+        size={33}
         style={{ paddingTop: sizeHelper.calHp(30) }}
         color={colors.white}
         fontWeight={'700'}
@@ -73,7 +73,7 @@ const TeamMember = (props: NotificationsScreenProps) => {
       <TouchableOpacity
         style={{
           width: '50%',
-          height: sizeHelper.calHp(80),
+          height: sizeHelper.calHp(75),
           backgroundColor: colors.white,
           borderRadius: sizeHelper.calWp(100),
           flexDirection: 'row',
@@ -100,9 +100,9 @@ const TeamMember = (props: NotificationsScreenProps) => {
         />
         <CustomText
           text={'Add Member'}
-          fontfam={fonts.bold}
-          size={25}
-          fontWeight={'700'}
+          fontfam={fonts.medium}
+          size={23}
+          fontWeight={'600'}
         />
       </TouchableOpacity>
     </ScreenLayout>

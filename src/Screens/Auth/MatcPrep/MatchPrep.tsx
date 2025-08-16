@@ -37,7 +37,7 @@ const MatcPrep = (props: NotificationsScreenProps) => {
         <CustomText
           text={'Match Details'}
           fontWeight={'700'}
-          size={35}
+          size={33}
           color="white"
           marginT={sizeHelper.calHp(30)}
         />
@@ -110,9 +110,7 @@ const MatcPrep = (props: NotificationsScreenProps) => {
           text={'Start Match'}
           bgColor="white"
           borderRadius={sizeHelper.calWp(50)}
-          textColor="black"
-          fontSize={26}
-          fontWeight="700"
+          textColor={colors.primary}
         />
       </View>
     </ScreenLayout>

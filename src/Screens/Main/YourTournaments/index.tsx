@@ -54,7 +54,7 @@ const YourTournamentsScreen = (props: NotificationsScreenProps) => {
           renderSectionHeader={({ section: { title } }) => (
             <CustomText
               text={title}
-              size={33}
+              size={30}
               marginB={sizeHelper.calHp(20)}
               color={colors.white}
               fontWeight={'700'}
