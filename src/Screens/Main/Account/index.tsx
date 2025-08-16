@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import {
   FlatList,
   Image,
+  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -24,7 +25,7 @@ const AccountScreen = (props: NotificationsScreenProps) => {
   const Detail = ({ onPress, text }: any) => {
     return (
       <TouchableOpacity onPress={onPress} style={appStyles.rowjustify}>
-        <CustomText text={text} size={28} color={colors.white} />
+        <CustomText text={text} size={25} color={colors.white} />
 
         <TouchableOpacity onPress={onPress}>
           <Image
@@ -50,10 +51,11 @@ const AccountScreen = (props: NotificationsScreenProps) => {
         text={'Account'}
         color={colors.white}
       />
-      <View
+      <ScrollView>
+ <View
         style={{
           paddingTop: sizeHelper.calHp(50),
-          gap: sizeHelper.calHp(30),
+          gap: sizeHelper.calHp(40),
         }}
       >
         <Detail text={'Logout'} />
@@ -92,11 +94,19 @@ const AccountScreen = (props: NotificationsScreenProps) => {
           onPress={() => props.navigation.navigate('PaymentConfirmationScreen')}
         />
 
+          <Detail
+          text={'Team Alphan'}
+          onPress={() => props.navigation.navigate('TeamAlphaChatScreen')}
+        />
+
         <Detail
           text={'Edit Profile'}
           onPress={() => props.navigation.navigate('EditProfileScreen')}
         />
+        
       </View>
+      </ScrollView>
+     
     </ScreenLayout>
   );
 };

@@ -28,8 +28,8 @@ const TournamentsScreen = (props: NotificationsScreenProps) => {
     >
       <CustomHeader
         arrow={images.white_back_arrow}
-        text={'Account'}
-        color={'white'}
+        text={'Notifications'}
+        color={colors.white}
 
       />
       <View
@@ -46,59 +46,32 @@ const TournamentsScreen = (props: NotificationsScreenProps) => {
             alignSelf: 'flex-start',
           }}
         >
-          <View
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: sizeHelper.calWp(160),
-              height: sizeHelper.calHp(60),
-              backgroundColor: '#293038',
-              borderRadius: sizeHelper.calWp(90),
-              gap: sizeHelper.calWp(20),
-            }}
+          <TouchableOpacity
+            style={styles.filterContainer}
           >
             <CustomText text={'All'} color="white" size={22} />
             <Image
               source={images.down}
               style={{
-                width: sizeHelper.calWp(45),
-                height: sizeHelper.calWp(45),
+                width: sizeHelper.calWp(42),
+                height: sizeHelper.calWp(42),
               }}
             />
-          </View>
-          <View
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: sizeHelper.calWp(300),
-              height: sizeHelper.calHp(60),
-              backgroundColor: '#293038',
-              borderRadius: sizeHelper.calWp(90),
-              gap: sizeHelper.calWp(20),
-            }}
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.filterContainer}
           >
             <CustomText text={'Tournaments'} color="white" size={22} />
             <Image
               source={images.down}
               style={{
-                width: sizeHelper.calWp(45),
-                height: sizeHelper.calWp(45),
+                width: sizeHelper.calWp(42),
+                height: sizeHelper.calWp(42),
               }}
             />
-          </View>
+          </TouchableOpacity>
           <TouchableOpacity
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: sizeHelper.calWp(200),
-              height: sizeHelper.calHp(60),
-              backgroundColor: '#293038',
-              borderRadius: sizeHelper.calWp(90),
-              gap: sizeHelper.calWp(18),
-            }}
+            style={styles.filterContainer}
           >
             <CustomText text={'Teams'} color="white" size={22} />
             <Image
@@ -116,11 +89,11 @@ const TournamentsScreen = (props: NotificationsScreenProps) => {
           style={{
             paddingTop: sizeHelper.calHp(50),
           }}
+          contentContainerStyle={{gap:sizeHelper.calHp(40)}}
           renderItem={({ item }) => (
             <View
               style={{
                 flexDirection: 'row',
-                paddingBottom: sizeHelper.calHp(50),
                 alignItems: 'center',
               }}
             >
@@ -129,6 +102,7 @@ const TournamentsScreen = (props: NotificationsScreenProps) => {
                   flexDirection: 'row',
                   gap: sizeHelper.calWp(20),
                   flex: 1,
+                  alignItems:"center"
                 }}
               >
                 <Image
@@ -140,7 +114,7 @@ const TournamentsScreen = (props: NotificationsScreenProps) => {
                 />
                 <View
                   style={{
-                    gap: sizeHelper.calWp(10),
+                    gap: sizeHelper.calWp(5),
                   }}
                 >
                   <CustomText
@@ -168,3 +142,18 @@ const TournamentsScreen = (props: NotificationsScreenProps) => {
   );
 };
 export default TournamentsScreen;
+
+const styles=StyleSheet.create({
+
+  filterContainer:{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingHorizontal:sizeHelper.calWp(23),
+              paddingVertical:sizeHelper.calHp(10),
+             
+              backgroundColor: '#293038',
+              borderRadius: sizeHelper.calWp(90),
+              gap: sizeHelper.calWp(20),
+            }
+})

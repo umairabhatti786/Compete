@@ -13,6 +13,7 @@ import ArchivedTournamentsScreen from '../../Screens/Main/ArchivedTournaments';
 import InAppPurchasesScreen from '../../Screens/Main/InAppPurchases';
 import CashPrizesScreen from '../../Screens/Main/CashPrizes';
 import PaymentConfirmationScreen from '../../Screens/Main/PaymentConfirmation';
+import TeamAlphaChatScreen from '../../Screens/Main/TeamAlphaChat';
 const Stack = createNativeStackNavigator();
 const AccountStack = () => {
   return (
@@ -25,7 +26,7 @@ const AccountStack = () => {
      <Stack.Screen name="ArchivedTournamentsScreen" component={ArchivedTournamentsScreen} />
      <Stack.Screen name="InAppPurchasesScreen" component={InAppPurchasesScreen} />
      <Stack.Screen name="CashPrizesScreen" component={CashPrizesScreen} />
-          <Stack.Screen name="PaymentConfirmationScreen" component={PaymentConfirmationScreen} />
+      <Stack.Screen name="PaymentConfirmationScreen" component={PaymentConfirmationScreen} />
 
 
 

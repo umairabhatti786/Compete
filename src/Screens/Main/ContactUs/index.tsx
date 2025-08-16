@@ -18,6 +18,7 @@ import { appStyles } from '../../../utils/GlobalStyles';
 import { colors } from '../../../utils/colors';
 import { fonts } from '../../../utils/Fonts';
 import CustomInput from '../../../components/CustomInput';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 type NotificationsScreenProps = {
   navigation: NativeStackNavigationProp<any>;
 };
@@ -30,6 +31,18 @@ const ContactUsScreen = (props: NotificationsScreenProps) => {
         gap: sizeHelper.calHp(30),
       }}
     >
+       <KeyboardAwareScrollView
+        enableOnAndroid
+        keyboardShouldPersistTaps="handled"
+        contentContainerStyle={{
+          flexGrow: 1, // 👈 Important for scroll
+          backgroundColor: colors.background,
+        //   paddingBottom: sizeHelper.calHp(50),
+          gap: sizeHelper.calHp(30),
+        }}
+        showsVerticalScrollIndicator={false}
+      >
+
       <CustomHeader
         arrow={images.white_back_arrow}
         text={'Contact Us'}
@@ -39,7 +52,7 @@ const ContactUsScreen = (props: NotificationsScreenProps) => {
       <CustomText
         text={"We're here to help"}
         fontfam={fonts.bold}
-        size={35}
+        size={33}
         style={{ paddingTop: sizeHelper.calHp(30) }}
         color={colors.white}
         fontWeight={'700'}
@@ -96,17 +109,8 @@ const ContactUsScreen = (props: NotificationsScreenProps) => {
         text={'Send Message'}
       />
 
-      {/* <View
-        style={{
-        //   paddingTop: sizeHelper.calHp(50),
-          gap: sizeHelper.calHp(30),
-        }}
-      >
-        <Detail text={'Logout'} />
-        <Detail text={'Contact Us'} />
-        <Detail text={'Teams'} />
-        <Detail text={'Edit Profile'} />
-      </View> */}
+            </KeyboardAwareScrollView>
+
     </ScreenLayout>
   );
 };

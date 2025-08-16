@@ -6,6 +6,7 @@ import {
   Dimensions,
   Image,
   StyleSheet,
+  FlatList,
 } from 'react-native';
 import ScreenLayout from '../../../components/ScreenLayout';
 import CustomHeader from '../../../components/CustomHeader/CustomHeader';
@@ -27,33 +28,28 @@ const CreateTeam = (props: NotificationsScreenProps) => {
   const slides = [
     {
       id: 1,
-      title: 'Choose a logo',
       image: images.logo_one,
-      image2: images.logo_two,
-      image3: images.logo_three,
-      image4: images.logo_four,
-      image5: images.logo_five,
-      image6: images.logo_six,
     },
     {
       id: 2,
-      title: 'Choose a logo',
-      image: images.logo_one,
-      image2: images.logo_two,
-      image3: images.logo_three,
-      image4: images.logo_four,
-      image5: images.logo_five,
-      image6: images.logo_six,
+
+      image: images.logo_two,
     },
     {
       id: 3,
-      title: 'Choose a logo',
-      image: images.logo_one,
-      image2: images.logo_two,
-      image3: images.logo_three,
-      image4: images.logo_four,
-      image5: images.logo_five,
-      image6: images.logo_six,
+      image: images.logo_three,
+    },
+    {
+      id: 4,
+      image: images.logo_four,
+    },
+    {
+      id: 5,
+      image: images.logo_five,
+    },
+    {
+      id: 6,
+      image: images.logo_six,
     },
   ];
 
@@ -63,7 +59,12 @@ const CreateTeam = (props: NotificationsScreenProps) => {
   };
 
   return (
-    <ScreenLayout style={{ backgroundColor: '#121417' }}>
+    <ScreenLayout
+      style={{
+        backgroundColor: colors.background,
+        gap: sizeHelper.calHp(30),
+      }}
+    >
       <CustomHeader
         arrow={images.white_back_arrow}
         text={'Create Team'}
@@ -74,7 +75,7 @@ const CreateTeam = (props: NotificationsScreenProps) => {
       />
 
       <View style={styles.dotsContainer}>
-        {slides.map((_, index) => (
+        {[1, 2, 4].map((_, index) => (
           <Text
             key={index}
             style={[
@@ -86,8 +87,37 @@ const CreateTeam = (props: NotificationsScreenProps) => {
           </Text>
         ))}
       </View>
+      <View style={{ flex: 1 }}>
+        <CustomText
+          text={'Choose a logo'}
+          color={colors.white}
+          size={30}
+          fontWeight={'700'}
+          fontfam={fonts.bold}
+          // marginB={sizeHelper.calHp(35)}
+        />
 
-      <ScrollView
+        <FlatList
+          data={slides}
+          numColumns={2}
+          keyExtractor={item => item.id.toString()}
+          columnWrapperStyle={{
+            justifyContent: 'space-around',
+          }}
+          contentContainerStyle={{ gap: sizeHelper.calWp(30),paddingTop:sizeHelper.calHp(40) }}
+          renderItem={({ item }) => (
+            <Image
+              style={{
+                width: sizeHelper.calWp(250),
+                height: sizeHelper.calWp(250),
+              }}
+              source={item.image}
+            />
+          )}
+        />
+      </View>
+
+      {/* <ScrollView
         horizontal
         pagingEnabled
         showsHorizontalScrollIndicator={false}
@@ -139,7 +169,7 @@ const CreateTeam = (props: NotificationsScreenProps) => {
             </View>
           </View>
         ))}
-      </ScrollView>
+      </ScrollView> */}
       <View
         style={{
           marginBottom: sizeHelper.calHp(30),

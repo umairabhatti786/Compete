@@ -216,7 +216,7 @@ const TournamentDetail = (props: NotificationsScreenProps) => {
           <CustomButton
             text={'Register Player'}
             textColor={colors.white}
-            
+            onPress={()=>props.navigation.navigate("ScheduleScreen")}
             height={sizeHelper.calHp(70)}
             bgColor={'#293038'}
             width={'45%'}

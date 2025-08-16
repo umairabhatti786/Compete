@@ -68,8 +68,8 @@ const TeamsScreen = (props: NotificationsScreenProps) => {
           <Image
             source={images.add}
             style={{
-              width: sizeHelper.calWp(45),
-              height: sizeHelper.calWp(45),
+              width: sizeHelper.calWp(40),
+              height: sizeHelper.calWp(40),
             }}
           />
         </TouchableOpacity>

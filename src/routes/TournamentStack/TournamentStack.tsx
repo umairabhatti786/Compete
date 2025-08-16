@@ -4,6 +4,7 @@ import TournamentsScreen from '../../Screens/Main/Tournaments';
 import TournamentDetail from '../../Screens/Auth/TournamentDetail/TournamentDetail';
 import CreateTournamentScreen from '../../Screens/Main/CreateTournament';
 import SubmitMatchResultScreen from '../../Screens/Main/SubmitMatchResult';
+import ScheduleScreen from '../../Screens/Main/Schedule';
 const Stack = createNativeStackNavigator();
 const TournamentStack = () => {
   return (
@@ -18,6 +19,11 @@ const TournamentStack = () => {
         name="SubmitMatchResultScreen"
         component={SubmitMatchResultScreen}
       />
+       <Stack.Screen
+        name="ScheduleScreen"
+        component={ScheduleScreen}
+      />
+      
       
     </Stack.Navigator>
   );

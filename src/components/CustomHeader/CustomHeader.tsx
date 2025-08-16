@@ -55,7 +55,7 @@ const CustomHeader = ({
         <CustomText
           text={text}
           fontfam={fonts.medium}
-          size={size || 30}
+          size={size || 28}
           color={color || colors.primary}
           fontWeight={fontWeight || '600'}
           textAlign={'center'}

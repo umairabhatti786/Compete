@@ -88,6 +88,7 @@ export default{
     football:require('./football.png'),
     proof_match:require('./proof_match.png'),
     cup:require('./cup.png'),
+    calander:require('./calander.png'),
 
     
     football_img2:require('./football_img2.png'),

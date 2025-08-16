@@ -20,10 +20,14 @@ import ContactUsScreen from '../../Screens/Main/ContactUs';
 import EditProfileScreen from '../../Screens/Main/EditProfile';
 import LiveMatchesScreen from '../../Screens/Main/LiveMatches';
 import BanScreen from '../../Screens/Main/Ban';
+import TeamAlphaChatScreen from '../../Screens/Main/TeamAlphaChat';
+import Splash from '../../Screens/Auth/Splash';
 const Stack = createNativeStackNavigator();
 const AppStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="Splash" component={Splash} />
+
       <Stack.Screen name="WelComeScreen" component={WelComeScreen} />
       <Stack.Screen name="LoginSignIn" component={LoginSignIn} />
       <Stack.Screen name="LoginScreen" component={LoginScreen} />
@@ -40,6 +44,7 @@ const AppStack = () => {
       <Stack.Screen name="MatcPrep" component={MatcPrep} />
             <Stack.Screen name="EditProfileScreen" component={EditProfileScreen} />
             <Stack.Screen name="BanScreen" component={BanScreen} />
+          <Stack.Screen name="TeamAlphaChatScreen" component={TeamAlphaChatScreen} />
 
     </Stack.Navigator>
   );

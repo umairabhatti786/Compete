@@ -32,14 +32,14 @@ const YourTeamsScreen = (props: NotificationsScreenProps) => {
     >
       <CustomHeader
         arrow={images.white_back_arrow}
-        text={'Account'}
-        color={'white'}
+        text={'Teams'}
+        color={colors.white}
         onPress={() => props.navigation.goBack()}
       />
 
       <CustomText
         text={'Your Teams'}
-        size={35}
+        size={33}
         style={{ paddingTop: sizeHelper.calHp(30) }}
         color={colors.white}
         fontWeight={'700'}
