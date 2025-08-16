@@ -50,17 +50,15 @@ const CustomInput = ({
   label,
   textAlignVertical,
   innerPaddingTop,
+  placeholderTextColor,
+  labelColor,
 }: any) => {
   const [ShowPassword, setShowPassword] = useState(true);
   return (
-    <View style={{ ...props, marginTop: mT, gap: sizeHelper.calHp(10) }}>
-      {
-        label&&(
-          <CustomText text={label} size={23} color={colors.primary_black} />
-
-
-        )
-      }
+    <View style={{ ...props, marginTop: mT, gap: sizeHelper.calHp(10),width:width||"100%" }}>
+      {label && (
+        <CustomText text={label} size={23} color={ labelColor||colors.primary_black} />
+      )}
       <View
         style={[
           {
@@ -74,7 +72,7 @@ const CustomInput = ({
             justifyContent: 'space-between',
             paddingHorizontal: paddingHorizontal || sizeHelper.calWp(20),
             borderRadius: borderRadius || sizeHelper.calWp(20),
-            width: width || '100%',
+            width: '100%',
             marginLeft: marginLeft,
             marginBottom: marginb,
           },
@@ -99,14 +97,14 @@ const CustomInput = ({
           <TextInput
             style={[
               {
-                fontSize: Size || sizeHelper.calHp(20),
+                fontSize: Size || sizeHelper.calHp(23),
                 fontFamily: fonts.regular,
                 fontWeight: fontWeight || '500',
                 height: '100%',
                 textAlign: txalign,
                 justifyContent: 'center',
                 textAlignVertical: textAlignVertical,
-                color: colors.primary,
+                color:color || colors.primary,
 
                 paddingTop: innerPaddingTop,
                 ...(isCenter && { alignSelf: 'center' }),
@@ -114,7 +112,7 @@ const CustomInput = ({
               style,
             ]}
             placeholder={placeholder}
-            placeholderTextColor={colors.natural_dark_gray}
+            placeholderTextColor={placeholderTextColor|| colors.natural_dark_gray}
             keyboardType={keyboard}
             maxLength={maxLength}
             textContentType={textContentType}

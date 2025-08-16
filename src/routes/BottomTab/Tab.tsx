@@ -12,6 +12,7 @@ import AccountScreen from '../../Screens/Main/Account';
 import HomeScreen from '../../Screens/Auth/HomeScreen/HomeScreen';
 import TournamentStack from '../TournamentStack/TournamentStack';
 import TeamStack from '../TeamStack/TeamStack';
+import AccountStack from '../AccountStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -138,8 +139,8 @@ const Tabs = () => {
         }}
       />
       <Tab.Screen
-        name="Account"
-        component={AccountScreen}
+        name="AccountStack"
+        component={AccountStack}
         options={{
           headerShown: false,
           tabBarShowLabel: false,

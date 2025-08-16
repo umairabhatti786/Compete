@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import {
-    FlatList,
+  FlatList,
   Image,
   StyleSheet,
   Text,
@@ -23,58 +23,46 @@ const TeamRoles = (props: NotificationsScreenProps) => {
   return (
     <ScreenLayout
       style={{
-        backgroundColor: '#121417'
+        backgroundColor: '#121417',
       }}
     >
       <CustomHeader
         arrow={images.white_back_arrow}
         text={'Team Roles'}
-        color={'white'}
-        gap={1}
-        textwidth={70}
-        imgWidth={80}
-        imgHeight={80}
-        size={26}   
-        fontWeight={'700'}
-        seprateViewWidth={sizeHelper.calWp(70)}
+        color={colors.white}
         onPress={() => props.navigation.goBack()}
       />
-        <FlatList
-      data={Roles}
-      keyExtractor={item => item.id.toString()}
-      style={{
-        paddingTop: sizeHelper.calHp(50)
-      }}
-      renderItem={({ item }) => (
-        <TouchableOpacity
-          style={{
-            flexDirection: 'row',
-            gap: sizeHelper.calWp(20),
-            paddingBottom: sizeHelper.calHp(50),
-            alignItems:'center'
-          }}
-          onPress={()=>props.navigation.navigate('Lineup')}
+      <FlatList
+        data={Roles}
+        keyExtractor={item => item.id.toString()}
+        style={{
+          paddingTop: sizeHelper.calHp(40),
+        }}
+        renderItem={({ item }) => (
+          <TouchableOpacity
+            style={{
+              flexDirection: 'row',
+              gap: sizeHelper.calWp(20),
+              paddingBottom: sizeHelper.calHp(40),
+              alignItems: 'center',
+            }}
+            onPress={() => props.navigation.navigate('Lineup')}
           >
-          <Image source={item.MembersPic} style={{
-            width: sizeHelper.calWp(100),
-            height: sizeHelper.calWp(100)
-          }} />
-          <View>
-            <CustomText
-              text={item.MembersName}
-              color='white'
-              size={24} />
-            <CustomText
-              text={item.MembersPosts}
-              color='#9EABB8'
-              size={22} />
-          </View>
-      </TouchableOpacity>
-      )
-    }
-    />
+            <Image
+              source={item.MembersPic}
+              style={{
+                width: sizeHelper.calWp(100),
+                height: sizeHelper.calWp(100),
+              }}
+            />
+            <View>
+              <CustomText text={item.MembersName} color="white" size={24} />
+              <CustomText text={item.MembersPosts} color="#9EABB8" size={22} />
+            </View>
+          </TouchableOpacity>
+        )}
+      />
     </ScreenLayout>
-  )
-    ;
+  );
 };
 export default TeamRoles;

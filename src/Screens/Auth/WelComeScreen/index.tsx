@@ -35,6 +35,7 @@ const WelComeScreen = (props: HostingScreenProps) => {
           <CustomText
             text={'Looking forward to the most intense matches'}
             size={36}
+            style={{paddingHorizontal:sizeHelper.calWp(50)}}
             lineHeight={sizeHelper.calHp(52)}
             color={colors.white}
             textAlign={'center'}

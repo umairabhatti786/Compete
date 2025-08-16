@@ -44,6 +44,17 @@ export default{
     tournaments_filled:require('./tournaments_filled.png'),
     notifications_filled:require('./notifications_filled.png'),
     account_filled:require('./account_filled.png'),
+    next_arrow:require('./next_arrow.png'),
+    cross_arrow:require('./cross_arrow.png'),
+    user_img:require('./user_img.jpg'),
+
+    
+    tournaments_img1:require('./tournaments_img1.png'),
+    tournaments_img2:require('./tournaments_img2.png'),
+    tournaments_img3:require('./tournaments_img3.png'),
+    tournaments_img4:require('./tournaments_img4.png'),
+    tournaments_img5:require('./tournaments_img5.png'),
+
     
     //Tournament
     premiere_league_tournament:require('./premiere_league_tournament.png'),
@@ -73,8 +84,15 @@ export default{
     madrid:require('./madrid.png'),
     manchester:require('./manchester.png'),
     liverpool:require('./liverpool.png'),
+    up_down:require('./up_down.png'),
+    football:require('./football.png'),
+    proof_match:require('./proof_match.png'),
+    cup:require('./cup.png'),
+
     
-    
+    football_img2:require('./football_img2.png'),
+    football_img1:require('./football_img1.png'),
+
     //Choose Logo
     logo_one:require('./logo_one.png'),
     logo_two:require('./logo_two.png'),

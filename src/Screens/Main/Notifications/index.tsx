@@ -15,6 +15,7 @@ import CustomText from '../../../components/CustomText';
 import sizeHelper from '../../../utils/Helpers';
 import CustomButton from '../../../components/CustomBotton';
 import { Notification, TournamentCard } from '../../../utils/Data';
+import { colors } from '../../../utils/colors';
 type NotificationsScreenProps = {
   navigation: NativeStackNavigationProp<any>;
 };
@@ -22,22 +23,18 @@ const TournamentsScreen = (props: NotificationsScreenProps) => {
   return (
     <ScreenLayout
       style={{
-        backgroundColor: '#121417'
+        backgroundColor: colors.background,
       }}
     >
       <CustomHeader
         arrow={images.white_back_arrow}
-        text={'Notification'}
+        text={'Account'}
         color={'white'}
-        gap={1}
-        textwidth={70}
-        imgWidth={80}
-        imgHeight={80}
-        onPress={() => props.navigation.goBack()}
+
       />
       <View
         style={{
-          paddingTop: sizeHelper.calHp(50)
+          paddingTop: sizeHelper.calHp(50),
         }}
       >
         <View
@@ -46,7 +43,7 @@ const TournamentsScreen = (props: NotificationsScreenProps) => {
             alignItems: 'center',
             // width: '70%',
             gap: sizeHelper.calWp(20),
-            alignSelf: 'flex-start'
+            alignSelf: 'flex-start',
           }}
         >
           <View
@@ -58,21 +55,17 @@ const TournamentsScreen = (props: NotificationsScreenProps) => {
               height: sizeHelper.calHp(60),
               backgroundColor: '#293038',
               borderRadius: sizeHelper.calWp(90),
-              gap: sizeHelper.calWp(20)
-
+              gap: sizeHelper.calWp(20),
             }}
           >
-            <CustomText
-              text={"All"}
-              color='white'
-              size={22}
-            />
+            <CustomText text={'All'} color="white" size={22} />
             <Image
               source={images.down}
               style={{
                 width: sizeHelper.calWp(45),
-                height: sizeHelper.calWp(45)
-              }} />
+                height: sizeHelper.calWp(45),
+              }}
+            />
           </View>
           <View
             style={{
@@ -84,20 +77,16 @@ const TournamentsScreen = (props: NotificationsScreenProps) => {
               backgroundColor: '#293038',
               borderRadius: sizeHelper.calWp(90),
               gap: sizeHelper.calWp(20),
-
             }}
           >
-            <CustomText
-              text={"Tournaments"}
-              color='white'
-              size={22}
-            />
+            <CustomText text={'Tournaments'} color="white" size={22} />
             <Image
               source={images.down}
               style={{
                 width: sizeHelper.calWp(45),
-                height: sizeHelper.calWp(45)
-              }} />
+                height: sizeHelper.calWp(45),
+              }}
+            />
           </View>
           <TouchableOpacity
             style={{
@@ -108,28 +97,24 @@ const TournamentsScreen = (props: NotificationsScreenProps) => {
               height: sizeHelper.calHp(60),
               backgroundColor: '#293038',
               borderRadius: sizeHelper.calWp(90),
-              gap: sizeHelper.calWp(18)
-
+              gap: sizeHelper.calWp(18),
             }}
           >
-            <CustomText
-              text={"Teams"}
-              color='white'
-              size={22}
-            />
+            <CustomText text={'Teams'} color="white" size={22} />
             <Image
               source={images.down}
               style={{
                 width: sizeHelper.calWp(45),
-                height: sizeHelper.calWp(45)
-              }} />
+                height: sizeHelper.calWp(45),
+              }}
+            />
           </TouchableOpacity>
         </View>
         <FlatList
           data={Notification}
           keyExtractor={item => item.id.toString()}
           style={{
-            paddingTop: sizeHelper.calHp(50)
+            paddingTop: sizeHelper.calHp(50),
           }}
           renderItem={({ item }) => (
             <View
@@ -143,40 +128,43 @@ const TournamentsScreen = (props: NotificationsScreenProps) => {
                 style={{
                   flexDirection: 'row',
                   gap: sizeHelper.calWp(20),
-                  flex:1
+                  flex: 1,
                 }}
               >
-                <Image source={item.NotificationPic} style={{
-                  width: sizeHelper.calWp(100),
-                  height: sizeHelper.calWp(100)
-                }} />
+                <Image
+                  source={item.NotificationPic}
+                  style={{
+                    width: sizeHelper.calWp(100),
+                    height: sizeHelper.calWp(100),
+                  }}
+                />
                 <View
                   style={{
-                    gap: sizeHelper.calWp(10)
+                    gap: sizeHelper.calWp(10),
                   }}
                 >
                   <CustomText
                     text={item.NotificationName}
-                    color='white'
-                    size={24} />
+                    color="white"
+                    size={24}
+                  />
                   <CustomText
                     text={item.NotificationPosts}
-                    color='#9EABB8'
-                    size={22} />
+                    color="#9EABB8"
+                    size={22}
+                  />
                 </View>
               </View>
               <CustomText
                 text={item.NotificationTime}
-                color='#9EABB8'
+                color="#9EABB8"
                 size={22}
               />
             </View>
-          )
-          }
+          )}
         />
       </View>
     </ScreenLayout>
-  )
-    ;
+  );
 };
 export default TournamentsScreen;

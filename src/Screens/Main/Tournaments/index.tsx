@@ -30,9 +30,7 @@ const TournamentsScreen = (props: NotificationsScreenProps) => {
         text={'Tournaments'}
         color={'white'}
         gap={1}
-        textwidth={70}
-        imgWidth={80}
-        imgHeight={80}
+      
         onPress={() => props.navigation.goBack()}
       />
       <View

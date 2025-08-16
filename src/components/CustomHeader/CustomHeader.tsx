@@ -26,28 +26,56 @@ const CustomHeader = ({
   imgHeight,
   size,
   seprateViewWidth,
-  fontWeight
+  fontWeight,
+  disableLeftSource,
+  rightSource,
+  onRightSource,
 }: any) => {
   const navigation = useNavigation();
   return (
     <View>
       <View style={styles.HandleContainer}>
-        <TouchableOpacity onPress={() => onPress() || navigation.goBack()}>
-          <Image source={arrow} style={{
-            width:sizeHelper.calWp(imgWidth || 53),
-            height:  sizeHelper.calWp(imgHeight || 53),
-          }} />
-        </TouchableOpacity>
+        {!disableLeftSource ? (
+          <TouchableOpacity
+            onPress={() => (onPress ? onPress() : navigation.goBack())}
+          >
+            <Image
+              source={arrow || images.white_back_arrow}
+              style={{
+                width: sizeHelper.calWp(imgWidth || 53),
+                height: sizeHelper.calWp(imgHeight || 50),
+              }}
+              // resizeMode="contain"
+            />
+          </TouchableOpacity>
+        ) : (
+          <View style={{ width: sizeHelper.calWp(50) }} />
+        )}
+
         <CustomText
           text={text}
           fontfam={fonts.medium}
           size={size || 30}
           color={color || colors.primary}
-          fontWeight={fontWeight|| '600'}
+          fontWeight={fontWeight || '600'}
           textAlign={'center'}
           marginR={mr}
         />
-        <View style={{ width: seprateViewWidth || sizeHelper.calWp(50) }} />
+
+        {rightSource ? (
+          <TouchableOpacity onPress={onRightSource}>
+            <Image
+              source={rightSource}
+              style={{
+                width: sizeHelper.calWp(imgWidth || 45),
+                height: sizeHelper.calWp(imgHeight || 45),
+                tintColor:colors.white,
+              }}
+            />
+          </TouchableOpacity>
+        ) : (
+          <View style={{ width: seprateViewWidth || sizeHelper.calWp(50) }} />
+        )}
       </View>
     </View>
   );
